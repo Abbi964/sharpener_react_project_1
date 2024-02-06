@@ -1,0 +1,29 @@
+.product-details{
+    display: flex;
+    flex-direction: row;
+    width: 62.5vw;
+    height: 5.5rem;
+    color: white;
+    align-items: center;
+    margin-left: 14vw;
+    margin-bottom: 0.5rem;
+    padding-right: 2rem;
+}
+
+.product-details h2 {
+  color: #3a3a3a;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.product-item__price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #0b441c;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
