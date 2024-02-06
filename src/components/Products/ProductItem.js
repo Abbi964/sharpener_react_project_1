@@ -26,7 +26,7 @@ function ProductItem(props){
         <Card price={props.price} id={props.id} className='product-details'>
             <h2>{props.name}</h2>
             <div className="product-item__price">Rs{props.price}</div>
-            <button onClick={deletionHandeler}>DELETE</button>
+            <button onClick={deletionHandeler} className="delBtn">DELETE</button>
         </Card>
     )
 }

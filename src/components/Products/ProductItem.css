@@ -27,3 +27,14 @@
   padding: 0.5rem;
   border-radius: 12px;
 }
+
+.delBtn{
+  margin-left: 1rem;
+  padding: 5px;
+  border-radius: 9px;
+  background-color: #f77575;
+  border: 1px solid red;
+}
+.delBtn:hover{
+  background-color: rgb(243, 44, 44);
+}
