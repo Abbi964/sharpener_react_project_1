@@ -3,8 +3,12 @@ import ProductItem from './ProductItem';
 
 function Products(props){
 
+    function priceReducerHandler(price){
+        props.onReduceTotalValue(+price)
+    }
+
     let products_content = props.items.map((product)=>(
-        <ProductItem
+        <ProductItem onReducePrice={priceReducerHandler}
             key={product.prodId}
             id={product.prodId}
             name={product.prodName}
