@@ -3,8 +3,8 @@ import React, {useState, useEffect} from "react";
 const context = React.createContext({
     totalValue : 0,
     currentProducts : [],
-    addProductHandler : ()=>{},
-    totalValueRecucerHandler : ()=>{}
+    addProduct : ()=>{},
+    totalValueRecucer : ()=>{}
 })
 
 export const ContextProvider = (props)=>{
@@ -49,8 +49,8 @@ export const ContextProvider = (props)=>{
         <context.Provider value={{
             totalValue : totalValue,
             currentProducts : currentProducts,
-            addProductHandler  : addProductHandler,
-            totalValueRecucerHandler : totalValueRecucerHandler
+            addProduct  : addProductHandler,
+            totalValueRecucer : totalValueRecucerHandler
         }}>
             {props.children}
         </context.Provider>

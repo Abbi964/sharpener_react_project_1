@@ -9,9 +9,9 @@ function App() {
 
   return (
     <Fragment>
-      <NewProduct onAddProduct={ctx.addProductHandler}/>
+      <NewProduct/>
       <h3>Total value worth of products : Rs{ctx.totalValue}</h3>
-      <Products onReduceTotalValue={ctx.totalValueRecucerHandler} items={ctx.currentProducts}/>
+      <Products/>
     </Fragment>
   );
 }

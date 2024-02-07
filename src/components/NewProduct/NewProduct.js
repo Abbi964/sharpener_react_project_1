@@ -1,11 +1,15 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import "./NewProduct.css";
+import context from "../../context/context";
 
 function NewProduct(props) {
     // making ref for inputs
     let nameInputRef = useRef()
     let idInputRef = useRef()
     let priceInputRef = useRef()
+
+    // using context
+    const ctx = useContext(context)
 
   function submitHandler(e) {
     e.preventDefault()
@@ -29,7 +33,7 @@ function NewProduct(props) {
     priceInputRef.current.value = '';
     // ------------------------------------------------------------------------------- //
 
-    props.onAddProduct(prodObj)
+    ctx.addProduct(prodObj)
 
   }
 

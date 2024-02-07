@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import './ProductItem.css'
 import Card from "../UI/Card";
+import context from "../../context/context";
 
 function ProductItem(props){
+    const ctx = useContext(context)
 
     function deletionHandeler(e){
         let id = e.target.parentElement.id
@@ -14,12 +16,12 @@ function ProductItem(props){
         let currentProdArray = JSON.parse(localStorage.getItem('prodArray'))
         // removing product
         let newProdArray = currentProdArray.filter((prod)=>{
-            return prod.prodId != id
+            return +prod.prodId !== +id
         })
         localStorage.setItem('prodArray',JSON.stringify([...newProdArray]))
 
         //--------------- reducing total price --------------- //
-        props.onReducePrice(+price)
+        ctx.totalValueRecucer(+price)
     }
 
     return(

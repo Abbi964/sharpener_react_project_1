@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProductItem from './ProductItem';
+import context from "../../context/context";
 
 function Products(props){
+    const ctx = useContext(context)
 
-    function priceReducerHandler(price){
-        props.onReduceTotalValue(+price)
-    }
-
-    let products_content = props.items.map((product)=>(
-        <ProductItem onReducePrice={priceReducerHandler}
+    let products_content = ctx.currentProducts.map((product)=>(
+        <ProductItem
             key={product.prodId}
             id={product.prodId}
             name={product.prodName}
